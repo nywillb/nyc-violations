@@ -10,48 +10,135 @@
         crossorigin="anonymous" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="tickets.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src="tickets.js"></script>
 </head>
 
 <body>
-    <input class="input" type="text" placeholder="state" id="state" />
-    <input class="input" type="text" placeholder="plate" id="plate" />
-    <button id="go">Go</button>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Date</th>
-                <th>Time</th>
-                <th><abbr title="Police Precint">Pct</abbr></th>
-                <th>Agency</th>
-                <th>Borough</th>
-                <th><abbr title="Penalty Amount">Amt</abbr></th>
-                <th><abbr title="Amount Paid">Paid</abbr></th>
-                <th><abbr title="Summons">Smns</abbr></th>
-                <th>Reason</th>
-            </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <th>#</th>
-                <th>Date</th>
-                <th>Time</th>
-                <th><abbr title="Police Precint">Pct</abbr></th>
-                <th>Agency</th>
-                <th>Borough</th>
-                <th><abbr title="Penalty Amount">Amt</abbr></th>
-                <th><abbr title="Amount Paid">Paid</abbr></th>
-                <th><abbr title="Summons">Smns</abbr></th>
-                <th>Reason</th>
-            </tr>
-        </tfoot>
-        <tbody id="results">
-        </tbody>
-    </table>
+    <section class="hero is-medium is-primary is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    See a bad driver?
+                </h1>
+                <h2 class="subtitle">
+                    Look up any of their traffic or moving violations in New York City here!
+                </h2>
+            </div>
+        </div>
+    </section>
+    <section id="start">
+        <div class="license-plate">
+            <div class="license-plate-upper">
+                <div class="select is-large state-select">
+                    <select id="state">
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="DC">District Of Columbia</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </div>
+            </div>
+            <input class="input" type="text" placeholder="ABC123" id="plate" />
+        </div>
+        <button id="go" class="button is-primary is-large">Go</button>
+    </section>
+    <section id="end">
+        <h3 id="no-results">Sorry, but there were no results</h3>
+        <table class="table" id="results-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th><abbr title="Police Precint">Pct</abbr></th>
+                    <th>Agency</th>
+                    <th>Borough</th>
+                    <th><abbr title="Penalty Amount">Amt</abbr></th>
+                    <th><abbr title="Amount Paid">Paid</abbr></th>
+                    <th><abbr title="Summons">Smns</abbr></th>
+                    <th>Reason</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>#</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th><abbr title="Police Precint">Pct</abbr></th>
+                    <th>Agency</th>
+                    <th>Borough</th>
+                    <th><abbr title="Penalty Amount">Amt</abbr></th>
+                    <th><abbr title="Amount Paid">Paid</abbr></th>
+                    <th><abbr title="Summons">Smns</abbr></th>
+                    <th>Reason</th>
+                </tr>
+            </tfoot>
+            <tbody id="results">
+            </tbody>
+        </table>
+    </section>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Bulma</strong> by <a href="https://williambarkoff.com">William Barkoff</a>. Source code for this
+                project is freely available on
+                <a href="https://github.com/nywillb/nyc-violations">GitHub</a> and licensed under the <a href="license.md">MIT
+                    License</a>.
+            </p>
+            <p>Special thanks to The City Of New York's <a href="https://opendata.cityofnewyork.us">NYC OpenData</a>.
+            </p>
+        </div>
+    </footer>
 </body>
 
 </html>

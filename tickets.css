@@ -1,0 +1,66 @@
+#state {
+    background-color: black;
+    color: white;
+    border: 0px;
+    text-align: center;
+    width: 500px;
+    height: 50px;
+    font-size: 30px;
+    padding-top: 3px;
+}
+
+#plate {
+    height: 210px;
+    border: none;
+    text-align: center;
+    font-size: 120px;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-family: monospace;
+    border-radius: 20px;
+}
+
+#plate {
+    border: none;
+    text-transform: uppercase;
+}
+
+.state-select {
+    background-color: black;
+    height: 50px;
+}
+
+.license-plate {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    border: 20px black solid;
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+#go {
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#start {
+    text-align: center;
+    margin: auto;
+}
+
+#end {
+    display: none;
+    text-align: center;
+}
+
+.hero {
+    text-align: center;
+}
+
+#no-results {
+    display: none;
+}
